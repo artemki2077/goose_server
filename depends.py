@@ -4,10 +4,8 @@ from services.database_service import DataBaseService
 
 load_dotenv()
 
-# os.environ.get()
 
-
-dataBaseService = DataBaseService()
+dataBaseService = DataBaseService(host='62.113.114.207', port=6380, password=os.environ.get('DB_PASSWOED'))
 
 
 def get_dataBaseService() -> DataBaseService:
